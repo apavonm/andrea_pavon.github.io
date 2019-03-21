@@ -1,120 +1,38 @@
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-     <title>One Page Resume</title>
-
-     <style type="text/css">
-        * { margin: 0; padding: 0; }
-        body { font: 16px Helvetica, Sans-Serif; line-height: 24px; background: url(images/noise.jpg); }
-        .clear { clear: both; }
-        #page-wrap { width: 800px; margin: 40px auto 60px; }
-        #pic { float: right; margin: -30px 0 0 0; }
-        h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
-        h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
-        h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
-        p { margin: 0 0 16px 0; }
-        a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
-        a:hover { border-bottom-style: solid; color: black; }
-        ul { margin: 0 0 32px 17px; }
-        #objective { width: 500px; float: left; }
-        #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
-        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
-        dd { width: 600px; float: right; }
-        dd.clear { float: none; margin: 0; height: 15px; }
-     </style>
+    <meta charset="UTF-8">
+    <title>TODO List App</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
 </head>
-
 <body>
+    <div class="container">
+        <h1>Lista de Tareas</h1>
+        <p>
+            <label for="new-task">Nueva Tarea</label>
+            <input id="new-task" type="text"><button class="add">Agregar</button>
+        </p>
 
-    <div id="page-wrap">
-    
-        <img src="images/14115625859081.jpg" alt="Andrea" id="pic" />
-    
-        <div id="contact-info" class="vcard">
-        
-            <!-- Microformats! -->
-        
-            <h1 class="fn">Andrea Pavón</h1>
-        
-            <p>
-                Cell: <span class="tel">0981 446 544</span><br />
-                Email: <a class="email" href="mailto:andreapa132@gmail.com">andreapa132@gmail.com</a>
-            </p>
-        </div>
-                
-        <div id="objective">
-            <p>
-			Soy una persona dinámica, trabajadora y una profesional metódica en busca de nuevos conocimientos y habilidades en pos de crecer personal, profesional y laboralmente. Mi experiencia laboral hasta el momento me a llevado a adquirir importantes conocimientos en el desarrollo y mejora de aplicaciones especialmente en ambiente Genexus, y también en bases de datos como Postgres, Oracle y SQL. Conocimientos que podran aportar bastante al desarrollo tecnológico de su compañía. 
-            </p>
-        </div>
-        
-        <div class="clear"></div>
-        
-        <dl>
-            <dd class="clear"></dd>
-            
-            <dt>Educación</dt>
-            <dd>
-                <h2>Universidad Nacional de Asunción-Facultad Politécnica</h2>
-                <p><strong>Enfasis:</strong>Licenciatura en Ciencias Informáticaz<br />
-                   <strong>Especialidad:</strong> Analista de Desarrollo</p>
-            </dd>
-            
-            <dd class="clear"></dd>
-            
-            <dt>Habilidades</dt>
-            <dd>
-                <h2></h2>
-                <p>Análisis de procesos, soporte técnico a usuarios, solución de problemas, planificación, documentaciones y desarrollo de nuevos proyectos</p>
-                
-                <h2>Habilidades Adicionales</h2>
-                <p>Manejo del idioma Inglés, herramientas de ofimática, conocimientos iniciales de Java y Python</p>
-            </dd>
-            
-            <dd class="clear"></dd>
-            
-            <dt>Experiencia</dt>
-            <dd>
-                <h2>MicroInformática <span>Desarrolladora Genexus - Asunción, Paraguay - 2015-2017</span></h2>
-                <ul>
-                    <li>Desarrollo de sistemas informaticos para empresas</li>
-                    <li>Soporte en sitio para usuarios</li>
-                    <li>Planificación de Proyectos</li>
-                </ul>
-                
-                <h2>La Rural de Seguros<span>Analista de Desarrollo -Asunción, Paraguay - 2018-2019</span></h2>
-                <ul>
-                    <li>Desarrollo de módulos adicionales (cobertura de seguros para Flota de vehículos)</li>
-                    <li>Implementacion de nuevo sistema Core</li>
-                    <li>Analisis general de proyectos</li>
-                </ul> 
+        <h2>Lista de Tareas Pendientes</h2>
+        <ul id="incomplete-tasks">
 
-                <h2>Bancard <span>Analista de Desarrollo -Asunción, Paraguay - 2019</span></h2>
-                <ul>
-                    <li>Análisis de nuevas iniciativas</li>
-                    <li>Desarrollo de especificaciones Técnicas para nuevos desarrollos</li>
-                    <li>Documentaciones</li>
-                </ul> 
-            </dd>
-            
-            <dd class="clear"></dd>
-            
-            <dt>Intereses Generales</dt>
-            <dd>Leer, Ir al cine, deportes, Ver series.</dd>
-            
-            <dd class="clear"></dd>
-            
-            <dt>Referencias</dt>
-            <dd>Available on request</dd>
-            
-            <dd class="clear"></dd>
-        </dl>
-        
-        <div class="clear"></div>
-    
+
+        </ul>
+
+        <h2>Lista de Tareas Completadas</h2>
+        <ul id="completed-tasks">
+
+        </ul>
     </div>
-
+    <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                alt="¡CSS Válido!" >
+        </a>
+    </p>
+    <script type="text/javascript" src="js/ajax.js" async></script>
+    <script type="text/javascript" src="js/todolist.js" async></script>
 </body>
-
 </html>
